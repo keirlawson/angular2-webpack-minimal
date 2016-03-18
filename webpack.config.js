@@ -1,5 +1,10 @@
 module.exports = {
 
+  entry: './app/main.ts',
+  output: {
+    filename: 'bundle.js'
+  },
+
   // Currently we need to add '.ts' to resolve.extensions array.
   resolve: {
     extensions: ['', '.webpack.js', '.web.js', '.ts', '.js']
@@ -13,7 +18,7 @@ module.exports = {
     loaders: [
       {
         test: /\.ts$/,
-        loader: 'typescript-loader'
+        loader: 'ts-loader'
       }
     ]
   }
